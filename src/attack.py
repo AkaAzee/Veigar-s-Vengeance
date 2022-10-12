@@ -54,3 +54,6 @@ class AutoBoss(AnimateSprite):
         self.position = (self.position[0] + self.dir[0] * self.speed,
                          self.position[1] + self.dir[1] * self.speed)
         self.change_animation("auto_attack", 8, 5)
+
+    def zob(self):
+        pass
