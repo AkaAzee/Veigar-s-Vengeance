@@ -413,3 +413,5 @@ class Game(AnimateSprite):
             pygame.display.flip()
 
         pygame.quit()
+
+print("caca")
