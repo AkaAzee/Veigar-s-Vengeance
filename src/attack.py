@@ -56,4 +56,4 @@ class AutoBoss(AnimateSprite):
         self.change_animation("auto_attack", 8, 5)
 
     def zob(self):
-        pass
+        print("caca")
