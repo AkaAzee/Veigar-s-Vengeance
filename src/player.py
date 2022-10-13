@@ -178,10 +178,9 @@ class Heal(AnimateSprite):
 
     def __init__(self, x, y):
         super().__init__()
-        self.image = self.get_image(0, 0, self.sprite_sheet_surplace, 33, 37)
+        self.image = pygame.image.load("sprites/heal.png")
         self.image.set_colorkey([0, 0, 0])
         self.rect = self.image.get_rect()
-        self.change_animation("heal", 8, 8)
         self.position = [x, y]
         self.feet = pygame.Rect(0, 0, self.rect.width * 0.5, 12)
         self.value = 400

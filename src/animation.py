@@ -11,7 +11,6 @@ class AnimateSprite(pygame.sprite.Sprite):
         self.sprite_sheet_surplace = pygame.image.load("sprites/surplace.png")
         self.sprite_auto_attack = pygame.image.load("sprites/auto_attack.png")
         self.sprite_sheet_surplace_auto = pygame.image.load("sprites/auto_surplace.png")
-        self.sprite_sheet_heal = pygame.image.load("sprites/heal.png")
         self.sprite_boss = pygame.image.load("sprites/boss.png")
         self.sprite_sheet_mvt_auto = pygame.image.load("sprites/deplacement_attack.png")
         self.animation_index = 0
@@ -24,7 +23,6 @@ class AnimateSprite(pygame.sprite.Sprite):
             "auto_attack": self.get_images(0, self.sprite_auto_attack, 11, 11, 4),
             "surplace_auto_right": self.get_images(0, self.sprite_sheet_surplace_auto, 33, 37, 4),
             "surplace_auto_left": self.get_images(37, self.sprite_sheet_surplace_auto, 33, 37, 4),
-            "heal": self.get_images(0, self.sprite_sheet_heal, 58, 58, 9),
             "boss": self.get_images(0, self.sprite_boss, 128, 153, 1),
             "deplacement_auto_right": self.get_images(0, self.sprite_sheet_mvt_auto, 33, 39, 4),
             "deplacement_auto_left": self.get_images(39, self.sprite_sheet_mvt_auto, 33, 39, 4)

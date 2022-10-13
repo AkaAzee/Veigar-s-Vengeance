@@ -108,7 +108,7 @@ class Game(AnimateSprite):
         player_name = font1.render(f'Veigar', True, (255, 255, 255))
         player_life = font2.render(f'{self.player.target_health}/{self.player.max_health}', True,
                                    (255, 255, 255))
-        boss_name = font3.render("Boss très méchant", True, (255, 255, 255))
+        boss_name = font3.render("Boss", True, (255, 255, 255))
 
         pygame.draw.rect(self.screen, (0, 0, 0), (20, 970, 700, 100))
         pygame.draw.rect(self.screen, (255, 255, 255), (20, 970, 700, 101), 3)
@@ -301,7 +301,6 @@ class Game(AnimateSprite):
             now9 = pygame.time.get_ticks()
             if (now9 - self.auto_time) >= 300 and self.bool_auto:
                 self.bool_auto = False
-
             if pressed[pygame.K_e]:
                 now3 = pygame.time.get_ticks()
                 if now3 - self.last49 >= self.heal_cooldown:
@@ -311,7 +310,6 @@ class Game(AnimateSprite):
                     self.heal_bool = True
                     self.player.get_health(400)
                     self.heal_time = pygame.time.get_ticks()
-                    self.heal.change_animation("heal", 8, 8)
                     self.heal_time = pygame.time.get_ticks()
             now7 = pygame.time.get_ticks()
             if (now7 - self.heal_time) >= 1700 and self.heal_bool:
@@ -368,8 +366,7 @@ class Game(AnimateSprite):
                     self.player.get_damage(100)
                     self.group.remove(sprite)
             if self.heal_bool:
-                self.heal.position[0] = (self.player.position[0]-5)
-                self.heal.position[1] = (self.player.position[1]-5)
+                self.heal.position[1] = (self.heal.position[1]+0.5)
             if self.boss.target_health == 0:
                 self.player.position[0] = self.reward.x
                 self.player.position[1] = self.reward.y
