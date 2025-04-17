@@ -1,4 +1,2 @@
 # Veigar's Vengeance
-Projet NSI
-
-ReadMe
+A little school project
